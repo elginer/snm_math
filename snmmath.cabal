@@ -1,0 +1,46 @@
+name: snmmath
+version: 0.0.1
+cabal-version: >=1.2
+build-type: Simple
+license: GPL-3 
+license-file: /home/spoon/Desktop/snm_math/COPYING
+copyright: John Morrice <spoon@killersmurf.com>
+maintainer: John Morrice <spoon@killersmurf.com>
+build-depends: base >=4 && <5, snm >=0.0.5, xhtml -any
+stability:
+homepage:
+package-url:
+bug-reports: John Morrice <spoon@killersmurf.com>
+synopsis: A syntax highlighter plugin for snm providing nice mathematics and logic symbols
+description: A syntax highlighter plugin for snm providing nice mathematics and logic symbols
+category:
+author: John Morrice <spoon@killersmurf.com>
+tested-with: GHC >=6.12.3
+data-files:
+data-dir: ""
+extra-source-files:
+extra-tmp-files:
+exposed-modules: Text.Syntax.Math
+exposed: False
+buildable: True
+build-tools:
+cpp-options:
+cc-options:
+ld-options:
+pkgconfig-depends:
+frameworks:
+c-sources:
+extensions:
+extra-libraries:
+extra-lib-dirs:
+includes:
+install-includes:
+include-dirs:
+hs-source-dirs: src
+other-modules:
+ghc-prof-options:
+ghc-shared-options:
+ghc-options:
+hugs-options:
+nhc98-options:
+jhc-options:
