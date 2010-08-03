@@ -35,6 +35,7 @@ text:
        \nunion                  {language union math}
        \nintersection           {language intersection math}
        \nimplies                {language implies math}
+       \nderives                {language derives math}
        \n=>                     {language => math}
        \n->                     {language -> math}
        \n|->                    {language |-> math}

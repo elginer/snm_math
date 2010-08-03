@@ -61,6 +61,7 @@ syms = map (\(inp, cls, out) -> (inp, cls, concatMap html_sym out)) $
    , m "union" "∪"
    , m "intersection" "∩"
    , m "implies" "⇒"
+   , m "derives" "⊢"
    , m "=>" "⇒"
    , m "->" "→"
    , m "|->" "↦"
