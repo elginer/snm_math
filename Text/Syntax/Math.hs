@@ -12,8 +12,7 @@
 --
 -----------------------------------------------------------------------------
 
-module Text.Syntax.Math 
-   (math) where
+module Text.Syntax.Math where
 
 import Text.Syntax.Simple
 
@@ -30,8 +29,26 @@ math = highlight "snmmath:Text.Syntax.Math.math" syms
 m :: String -> String -> (String, String, String)
 m sym out = (sym, "math_symbol", out)
 
+html_sym :: Char -> String
+html_sym c =
+   if int_c > 255 
+      then "&#" ++ show int_c ++ ";" 
+      else
+         [c]
+   where
+   int_c = fromEnum c
+
+-- | Output a string to copy-paste into the snm documentation for this plugin
+doc_syms :: String
+doc_syms = unlines (map doc_sym inputs)
+   where
+   doc_sym inp = "       \\n" ++ inp ++ spaces inp ++ "{language " ++ inp ++ " math}"
+   max = maximum $ map length inputs
+   spaces i = replicate (5 + max - length i) ' '
+   inputs = map (\(i, _, _) -> i) syms
+
 syms :: [(String, String, String)]
-syms = 
+syms = map (\(inp, cls, out) -> (inp, cls, concatMap html_sym out)) $ 
    [ m "forall" "∀"
    , m "unique" "∃!"
    , m "forsome" "∃"
@@ -48,11 +65,14 @@ syms =
    , m "->" "→"
    , m "|->" "↦"
    , m "therefore" "∴"
+   , m "because" "∵"
    , m "{}" "∅"
+   , m "empty" "∅"
    , m "root" "√"
    , m "!=" "≠"
    , m ">=" "≥"
    , m "<=" "≤"
+   , m "orthogonal" "⊥"
    , m "or" "∨"
    , m "xor" "⊕"
    , m "(+)" "⊕"
@@ -61,7 +81,6 @@ syms =
    , m "<=>" "⇔"
    , m "top" "⊤"
    , m "bottom" "⊥"
-   , m "orthogonal" "⊥"
    , m "coprime" "⊥"
    , m "*" "·"
    , m "<<" "≪"
@@ -79,15 +98,14 @@ syms =
    , m "wreath" "≀"
    , m "ideal" "◅"
    , m "antijoin" "▻"
-   , m "<|" "◅"
-   , m "|>" "▻"
    , m "semidirect_product" "⋉"
    , m "semijoin" "⋊"
-   , m "|><" "⋉"
-   , m "><|" "⋊"
    , m "natural_join" "⋈"
    , m "|><|" "⋈"
-   , m "because" "∵"
+   , m "|><" "⋉"
+   , m "><|" "⋊"
+   , m "<|" "◅"
+   , m "|>" "▻"
    , m "qed" "∎"
    , m "congruent" "≅"
    , m "(.)" "∘"
@@ -100,10 +118,10 @@ syms =
    , m "gradient" "∇"
    , m "@" "∂"
    , m "delta" "Δ"
-   , m "dirac" "delta"
+   , m "dirac" "δ"
    , m "projection" "π"
    , m "pi" "π"
-   , m "O¬" "σ"
+   , m "O~" "σ"
    , m "selection" "σ"
    , m "transpose" "†"
    , m "entails" "⊧"

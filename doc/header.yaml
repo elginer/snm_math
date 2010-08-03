@@ -1,4 +1,4 @@
- Copyright John Morrice 2010
+# Copyright John Morrice 2010
 # This document is part of The Simple Nice-Looking Manual Generator documentation
 # This document is released under the terms of the GNU Free Documentation Licence
 # See the file DOC-COPYING.
@@ -8,5 +8,6 @@ banners:
    - "Contact spoon@killersmurf.com"
 preamble:
    - class: boring
-     text: "This document is released under the terms of the GNU Free Documentation License. See the file {external DOC-COPYING DOC-COPYING} for details"
+     text: "This document is released under the terms of the GNU Free Documentation License. See the file {external DOC-COPYING DOC-COPYING} for details."
+   - "This plugin will prettify many mathematical symbols."
 

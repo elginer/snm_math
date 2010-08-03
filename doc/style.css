@@ -1,0 +1,12 @@
+/* Copyright John Morrice 2010
+
+This document is part of The Simple Nice-Looking Manual Generator documentation
+This document is released under the terms of the GNU Free Documentation Licence
+See the file DOC-COPYING.
+*/
+
+.example {font-family: monospace; font-size: x-large;}
+body {font-family: sans; font: arial;}
+.intro_banner {text-align: center;}
+.boring {font-weight: bold;}
+.math_symbol {font-size: xx-large} 

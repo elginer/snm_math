@@ -1,0 +1,106 @@
+# Copyright John Morrice 2010
+# This document is part of The Simple Nice-Looking Manual Generator documentation
+# This document is released under the terms of the GNU Free Documentation Licence
+# See the file DOC-COPYING.
+
+title: Syntax highlighting
+number: 1
+unique: syntax
+text:
+   - "This plugin provides a math prettifying plugin for snm."
+   - "To use, put this in your syntax.yaml:"
+   - wrap: False
+     class: example
+     text:
+      "   package: snmmath-0.0.1 (If this document is not up to date, you may need to find the correct version number).
+     \n   module: Text.Syntax.Math
+     \n   symbol: math"
+   - "See the snm user guide on how to use this plugin."
+   - "A list of all symbols processed is given below."
+   - "The left column is the input text, the right column is the output symbol."
+   - "All output symbols will be given the css class {class math_symbol example}."
+   - "The symbols:"
+   - wrap: False
+     class: example
+     text:
+      "\nforall                 {language forall math}
+       \nunique                 {language unique math}
+       \nforsome                {language forsome math}
+       \nmember                 {language member math}
+       \n!member                {language !member math}
+       \nsubset                 {language subset math}
+       \nssubset                {language ssubset math}
+       \nsuperset               {language superset math}
+       \nssuperset              {language ssuperset math}
+       \nunion                  {language union math}
+       \nintersection           {language intersection math}
+       \nimplies                {language implies math}
+       \n=>                     {language => math}
+       \n->                     {language -> math}
+       \n|->                    {language |-> math}
+       \ntherefore              {language therefore math}
+       \nbecause                {language because math}
+       \nqed                    {language qed math}
+       \n\{}                     {language empty math}
+       \nempty                  {language empty math}
+       \nroot                   {language root math}
+       \n!=                     {language != math}
+       \n>=                     {language >= math}
+       \n<=                     {language <= math}
+       \nor                     {language or math}
+       \nxor                    {language xor math}
+       \n(+)                    {language (+) math}
+       \nand                    {language and math}
+       \niff                    {language iff math}
+       \n<=>                    {language <=> math}
+       \ntop                    {language top math}
+       \nbottom                 {language bottom math}
+       \northogonal             {language orthogonal math}
+       \ncoprime                {language coprime math}
+       \n*                      {language * math}
+       \n<<                     {language << math}
+       \n>>                     {language >> math}
+       \nkarp                   {language karp math}
+       \nvaries                 {language varies math}
+       \no<                     {language o< math}
+       \n/                      {language / math}
+       \n+-                     {language +- math}
+       \n-+                     {language -+ math}
+       \n!|                     {language !| math}
+       \naleph                  {language aleph math}
+       \nbeth                   {language beth math}
+       \napprox                 {language approx math}
+       \nwreath                 {language wreath math}
+       \nideal                  {language ideal math}
+       \nantijoin               {language antijoin math}
+       \n<|                     {language <| math}
+       \n|>                     {language |> math}
+       \nsemidirect_product     {language semidirect_product math}
+       \nsemijoin               {language semijoin math}
+       \n|><                    {language |>< math}
+       \n><|                    {language ><| math}
+       \nnatural_join           {language natural_join math}
+       \n|><|                   {language |><| math}
+       \ncongruent              {language congruent math}
+       \n(.)                    {language (.) math}
+       \ninfinity               {language infinity math}
+       \nsum                    {language sum math}
+       \nproduct                {language product math}
+       \ncoproduct              {language coproduct math}
+       \nintegral               {language integral math}
+       \ncontour_integral       {language contour_integral math}
+       \ngradient               {language gradient math}
+       \n@                      {language @ math}
+       \ndelta                  {language delta math}
+       \ndirac                  {language dirac math}
+       \nprojection             {language projection math}
+       \npi                     {language pi math}
+       \nO~                     {language O~ math}
+       \nselection              {language selection math}
+       \ntranspose              {language transpose math}
+       \nentails                {language entails math}
+       \n|=                     {language |= math}
+       \n(x)                    {language (x) math}
+       \ntensor_product         {language tensor_product math}
+       \n(*)                    {language (*) math}"
+

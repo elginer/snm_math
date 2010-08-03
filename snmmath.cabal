@@ -21,7 +21,7 @@ data-dir: ""
 extra-source-files:
 extra-tmp-files:
 exposed-modules: Text.Syntax.Math
-exposed: False
+exposed: True 
 buildable: True
 build-tools:
 cpp-options:
@@ -36,7 +36,6 @@ extra-lib-dirs:
 includes:
 install-includes:
 include-dirs:
-hs-source-dirs: src
 other-modules:
 ghc-prof-options:
 ghc-shared-options:
